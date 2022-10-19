@@ -2768,7 +2768,7 @@ switch {
   color: $fg_color;
   background-color: $dark_fill;
   text-shadow: 0 1px transparentize(black, 0.9);
-  @include _shadows(0 1px $hilight_color, inset $button_shadow);
+  @include _shadows(0 1px $hilight_color, $button_shadow_pressed);
 
   &:checked {
     color: $selected_fg_color;
@@ -3075,7 +3075,7 @@ treeview.view radio:selected { &:focus, & { @extend %radio; }} // This is a work
   border-radius: 3px;
   background-color: $dark_fill;
   //padding: 1px;
-  @include _shadows(0 1px $hilight_color, inset $button_shadow);
+  @include _shadows(0 1px $hilight_color, $button_shadow_pressed);
 
   &:disabled { background-color: $insensitive_bg_color; }
 

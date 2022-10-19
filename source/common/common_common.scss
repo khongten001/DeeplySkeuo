@@ -87,5 +87,6 @@ $menu_radius: 5px;
 
 //these are copied from button, surely there is a better way to DRY
 $hilight_color: _button_hilight_color($dark_fill);
-$button_shadow: 0 1px 2px transparentize($shadow_hard_color, 0.6);
+$button_shadow_normal: inset 0 -1px 1px transparentize($shadow_hard_color, 0.6);
+$button_shadow_pressed: inset 0 1px 2px transparentize($shadow_hard_color, 0.6);
 

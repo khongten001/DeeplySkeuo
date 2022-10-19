@@ -2375,7 +2375,7 @@ switch {
   color: $fg_color;
   background-color: $dark_fill;
   transition: $focus_transition;
-  @include _shadows(0 1px $hilight_color, inset $button_shadow);
+  @include _shadows(0 1px $hilight_color, inset $button_shadow_pressed);
 
   @include focus-ring($offset: 0, $outer: true);
 
@@ -2579,7 +2579,7 @@ treeview.view radio:selected { &:selected, &:focus, & { @extend %radio; }} // Th
   border: 1px solid $borders_color;
   border-radius: 3px;
   background-color: $dark_fill;
-  @include _shadows(0 1px $hilight_color, inset $button_shadow);
+  @include _shadows(0 1px $hilight_color, $button_shadow_pressed);
   //padding:1px;
 
   headerbar & { background-color: darken($dark_fill,8%); } //3504
