@@ -1,14 +1,14 @@
 $window_fg: #241f31;
-$window_bg: #a7a7a7;
+$window_bg: #b1b1b1;
 $text_widget_fg: #241f31;
-$text_widget_bg: #908f8d;
+$text_widget_bg: #a2a09e;
 
 $selected_fg: #000000;
-$selected_bg: #b0dd7e;
+$selected_bg: #97caff;
 
 $button_fg: #241f31;
 $button_bg: #bcbeb9;
-$button_checked_bg: #b0dd7e;
+$button_checked_bg: #97caff;
 $button_checked_fg: #000000;
 
 
@@ -18,20 +18,20 @@ $disabled_bg: #938989;
 /*Usually an automatic fg color on these backgrounds should check this value!*/
 $warningc: #938989;
 $errorc: #990000;
-$successc: #73d216;
+$successc: #64cb00;
 
 
 $titlebar_active_fg: #000000;
-$titlebar_active_bg: #b0dd7e;
+$titlebar_active_bg: #97caff;
 
 $titlebar_backdrop_fg: #241f31;
-$titlebar_backdrop_bg: #a7a7a7;
+$titlebar_backdrop_bg: #b1b1b1;
 
-$hint_fg: #002269;
-$hint_bg: #6789b4;
+$hint_fg: #073b00;
+$hint_bg: #69b467;
 
-$osd_fg: #002269;
-$osd_bg: #6789b4;
+$osd_fg: #073b00;
+$osd_bg: #69b467;
 
 $link_fg: #004B91;
 $link_visited_fg: #680091;

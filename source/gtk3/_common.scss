@@ -570,7 +570,7 @@ $_dot_color: $warning_color;//if($variant=='light', $selected_bg_color, lighten(
 }
 
 %button,
-button {
+button, button.flat {
   @at-root %button_basic, & {
 
     min-height: $button_min_height;
@@ -583,16 +583,17 @@ button {
     @include button(normal);
 
     @at-root %button_basic_flat,
-    &.flat:not(:hover):not(:active):not(:checked):not(:disabled) {
-      @include button(undecorated);
+    //&.flat:not(:hover):not(:active):not(:checked):not(:disabled) {
+      ////@include button(undecorated); //all buttons are real buttons
+      //@include button(normal);
       // to avoid adiacent buttons borders clashing when transitioning, the transition on the normal state is set
       // to none, while it's added back in the hover state, so the button decoration will fade in on hover, but
       // it won't fade out when the pointer leave the button allocation area. To make the transition more evident
       // in this case the duration is increased.
-      transition: none;
+      //transition: none;
 
 		
-    }
+    //}
 
     &:hover {
       @include button(hover);
@@ -636,8 +637,12 @@ button {
     }
 
     @at-root %button_basic_flat,
-    &.flat { 
-        &:backdrop, &:disabled, &:backdrop:disabled { @include button(undecorated); }
+    //&.flat 
+    { 
+        &:backdrop, &:disabled, &:backdrop:disabled { 
+          //@include button(undecorated);
+          @include button(normal);
+        }
         &:disabled, &:backdrop:disabled { background-color: $insensitive_bg_color;}
     
     }
@@ -708,42 +713,42 @@ button {
 
     @include button(osd);
 
-    border: none;
-    box-shadow: none;
+    //border: none;
+    //box-shadow: none;
 
     &:hover {
       @include button(osd-hover);
 
-      border: none;
-      box-shadow: none;
+      //border: none;
+      //box-shadow: none;
     }
 
     &:active,
     &:checked {
       @include button(osd-active);
 
-      border: none;
-      box-shadow: none;
+      //border: none;
+      //box-shadow: none;
     }
 
     &:disabled {
       &:backdrop, & {
         @include button(osd-insensitive);
 
-        border: none;
+        //border: none;
       }
     }
 
     &:backdrop {
       @include button(osd-backdrop);
 
-      border: none;
+      //border: none;
     }
   }
 
   //overlay / OSD style
   @at-root %osd_button,
-  .osd & {
+  .osd &, osd &.flat {
     @include button(normal, $osd_bg_color, $osd_fg_color);
 
     &:hover { @include button(hover, $osd_bg_color, $osd_fg_color); }
@@ -755,28 +760,31 @@ button {
 
     &:backdrop { @include button(backdrop, $osd_bg_color, $osd_fg_color); }
 
-    &.flat {
-      &:not(:hover):not(:active):not(:checked):not(:disabled) {@include button(undecorated, $osd_bg_color, $osd_fg_color);}
+    //&.flat {
+      //&:not(:hover):not(:active):not(:checked):not(:disabled) {
+        //// @include button(undecorated, $osd_bg_color, $osd_fg_color);
+        //@include button(normal, $osd_bg_color, $osd_fg_color);
+    //  }
 
-      box-shadow: none; //FIXME respect no edge on the button mixin
-      text-shadow: 0 1px black;
-      -gtk-icon-shadow: 0 1px black;
+    //  box-shadow: none; //FIXME respect no edge on the button mixin
+    //  text-shadow: 0 1px black;
+    //  -gtk-icon-shadow: 0 1px black;
 
-      &:hover { @include button(hover, $osd_bg_color, $osd_fg_color); }
+    //  &:hover { @include button(hover, $osd_bg_color, $osd_fg_color); }
 
-      &:disabled {
-        @include button(insensitive);
-        background-color: $insensitive_bg_color;
-        background-image: none;
-        border-color: transparent;
-        box-shadow: none;
-      }
+    //  &:disabled {
+    //    @include button(insensitive);
+    //    background-color: $insensitive_bg_color;
+    //    background-image: none;
+    //    border-color: transparent;
+    //    box-shadow: none;
+    //  }
 
-      &:backdrop { @include button(undecorated, $osd_bg_color, $osd_fg_color); }
+    //  &:backdrop { @include button(undecorated, $osd_bg_color, $osd_fg_color); }
 
-      &:active,
-      &:checked { @include button(active, $osd_bg_color, $osd_fg_color); }
-    }
+    //  &:active,
+    //  &:checked { @include button(active, $osd_bg_color, $osd_fg_color); }
+    // }
   }
 
   // Suggested and Destructive Action buttons
@@ -786,7 +794,8 @@ button {
       @include button(normal, $b_color, if(lightness($b_color)>50%, black, white));
 
       &.flat {
-        @include button(undecorated);
+        //@include button(undecorated);
+        @include button(normal);
 
         color: $b_color; //FIXME: does it work on the dark variant?
       }
@@ -813,7 +822,8 @@ button {
 
       &.flat {
         &:backdrop, &:disabled, &:backdrop:disabled {
-          @include button(undecorated);
+          //@include button(undecorated);
+          @include button(normal);
 
           color: transparentize($b_color, 0.2);
         }
@@ -1118,21 +1128,36 @@ modelbutton.flat,
   padding-right: 5px;
   border-radius: $button_radius;
   outline-offset: -2px;
+  @extend %button;
+  
+  &:not(:hover):not(:active):not(:checked):not(:disabled) {
+    @extend %undecorated_button;
+    //@extend %button;
+    }
 
-  &:not(:hover):not(:active):not(:checked):not(:disabled) {@extend %undecorated_button;}
-
-  &:hover { background-color: $popover_hover_color; }
+  &:hover { 
+    //@include button(hover)
+    background-color: $popover_hover_color; 
+    }
+  &:active {
+    @include button(active);
+  }
 
   &:selected { @extend %selected_items; }
 
   &:backdrop,
-  &:backdrop:hover { @extend %undecorated_button; }
+  &:backdrop:hover { 
+    @extend %undecorated_button;
+    //@extend %button;
+  }
 }
 
 modelbutton.flat arrow {
   background: none;
 
-  &:hover { background: none; }
+  &:hover { 
+    background: none; 
+  }
 
   &.left { -gtk-icon-source: -gtk-icontheme("pan-start-symbolic"); }
 
@@ -2436,23 +2461,25 @@ notebook {
     }
 
     > tabs > arrow {
-      @extend %button_basic;
+      //@extend %button_basic;
+      @extend %button;
 
-      @extend %button_basic_flat;
+      //@extend %button_basic_flat;
 
       min-height: 16px;
       min-width: 16px;
       border-radius: 0;
 
       &:hover:not(:active):not(:backdrop) {
-        background-clip: padding-box;
-        background-image: none;
-        background-color: transparentize(white, 0.7);
-        border-color: transparent;
-        box-shadow: none;
+        //background-clip: padding-box;
+        //background-image: none;
+        //background-color: transparentize(white, 0.7);
+        //border-color: transparent;
+        //box-shadow: none;
+        @include button(hover);
       }
 
-      &:disabled { @include button(undecorated); }
+      &:disabled { @include button(insensitive); }
     }
 
     tab {
@@ -3048,6 +3075,7 @@ treeview.view radio:selected { &:focus, & { @extend %radio; }} // This is a work
   border-radius: 3px;
   background-color: $dark_fill;
   //padding: 1px;
+  @include _shadows(0 1px $hilight_color, inset $button_shadow);
 
   &:disabled { background-color: $insensitive_bg_color; }
 
@@ -3382,12 +3410,12 @@ progressbar {
   // sizing
   &.horizontal {
     trough,
-    progress { min-height: 2px; }
+    progress { min-height: 4px; }
   }
 
   &.vertical {
     trough,
-    progress { min-width: 2px; }
+    progress { min-width: 4px; }
   }
 
   &.horizontal progress { margin: 0 -1px; } // the progress node is positioned after the trough border
@@ -4374,11 +4402,11 @@ decoration {
 
 // Window Close button
 button.titlebutton {
-  @extend %button_basic;
+  //@extend %button_basic;
 
-  &:not(:hover):not(:active):not(:checked):not(:disabled) {@extend %button_basic_flat;}
+  //&:not(:hover):not(:active):not(:checked):not(:disabled) {@extend %button_basic_flat;}
 
-  @include _button_text_shadow;
+  //@include _button_text_shadow;
 
   &:not(.appmenu) {
     border-radius: 9999px;
@@ -4387,7 +4415,13 @@ button.titlebutton {
     min-width: 0;
     min-height: 0;
   }
-	&.close { background-color: $error_color; color: white;}
+	&.close:not(:backdrop) { 
+	  @include button(normal, $error_color, white);
+	  &:hover {@include button(hover, $error_color, white);}
+    &:active {@include button(active, $error_color, white);} 
+  }
+	  
+	
   .selection-mode & {
     @extend %selection_mode_button_flat;
 
