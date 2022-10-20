@@ -826,13 +826,7 @@ notebook > header tabs > tab:backdrop.reorderable-page { border-color: transpare
 
 notebook > header tabs > tab:checked { color: #241f31; background-color: #a2a09e; }
 
-notebook > header tabs > tab:checked.reorderable-page { border-color: rgba(131, 131, 131, 0.5); background-color: rgba(177, 177, 177, 0.5); }
-
-notebook > header tabs > tab:checked.reorderable-page:hover { background-color: rgba(177, 177, 177, 0.7); }
-
 notebook > header tabs > tab:backdrop:checked { color: #6b6871; background-color: #a09d9b; }
-
-notebook > header tabs > tab:backdrop:checked.reorderable-page { border-color: #8c8c8c; background-color: #b1b1b1; }
 
 notebook > header tabs > tab button.flat { padding: 1px; margin: 2px; }
 
