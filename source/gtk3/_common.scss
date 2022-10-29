@@ -1190,7 +1190,8 @@ button.color {
 /* list buttons */
 /* tone down as per new designs, see issue #1473, #1748 */
 list row button.image-button:not(.flat) {
-  @extend %undecorated_button;
+  //@extend %undecorated_button;
+  @extend %button;
   border: 1px solid transparentize($borders_color, .5);
   &:hover { @include button(hover); }
   &:active,
@@ -2065,13 +2066,13 @@ treeview.view {
       background-color: $base_color;
       font-weight: bold;
       text-shadow: none;
-      box-shadow: none;
+      //box-shadow: none;
 
       &:hover {
         @extend %column_header_button;
 
         color: mix($_column_header_color, $fg_color, 50%);
-        box-shadow: none;
+        //box-shadow: none;
         transition: none; //I shouldn't need this
       }
 
@@ -2104,8 +2105,9 @@ treeview.view {
 
 %column_header_button {
   padding: 0 6px;
-  background-image: none;
+  //background-image: none;
   border-style: none solid solid none;
+  border-width: 0 1px 0 1px;
   border-color: $_treeview_borders_color;
   border-radius: 0;
   text-shadow: none;

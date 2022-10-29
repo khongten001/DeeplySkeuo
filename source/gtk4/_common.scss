@@ -1777,13 +1777,13 @@ treeview.view {
       background-color: $base_color;
       font-weight: bold;
       text-shadow: none;
-      box-shadow: none;
+      //box-shadow: none;
 
       &:hover {
         @extend %column_header_button;
 
         color: mix($_column_header_color, $fg_color, 50%);
-        box-shadow: none;
+        //box-shadow: none;
         transition: none; //I shouldn't need this
       }
 
@@ -1827,8 +1827,9 @@ treeview.view {
 
 %column_header_button {
   padding: 0 6px;
-  background-image: none;
+  //background-image: none;
   border-style: none none solid solid;
+  border-width: 0 0 1px 1px;
   border-color: $_treeview_borders_color;
   border-radius: 0;
   text-shadow: none;
@@ -2137,7 +2138,7 @@ switch {
   color: $fg_color;
   background-color: $dark_fill;
   transition: $focus_transition;
-  @include _shadows(0 1px $hilight_color, inset $button_shadow_pressed);
+  @include _shadows(0 1px $hilight_color, $button_shadow_pressed);
 
   @include focus-ring($offset: 0, $outer: true);
 
@@ -2183,7 +2184,7 @@ switch {
     outline-color: $alt_focus_border_color;
 
     @if $variant == 'light' {
-      box-shadow: none;
+      //box-shadow: none;
       border-color: $switch_borders_color;
 
       > slider { &:checked, & { border-color: $switch_borders_color; } }
