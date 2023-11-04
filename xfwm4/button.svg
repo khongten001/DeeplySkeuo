@@ -7,7 +7,7 @@
    viewBox="0 0 39.821884 40.675427"
    version="1.1"
    id="svg5"
-   inkscape:version="1.1.2 (0a00cf5339, 2022-02-04)"
+   inkscape:version="1.1.1 (3bf5ae0d25, 2021-09-20)"
    sodipodi:docname="button.svg"
    inkscape:export-filename="/home/nestor/Temes/xfwm/skeuomorphic/button-pressed-green.png"
    inkscape:export-xdpi="15.611391"
@@ -33,14 +33,14 @@
      fit-margin-right="0"
      fit-margin-bottom="0"
      inkscape:zoom="3.411691"
-     inkscape:cx="56.716743"
-     inkscape:cy="1.7586587"
-     inkscape:window-width="1865"
-     inkscape:window-height="1002"
-     inkscape:window-x="55"
-     inkscape:window-y="0"
+     inkscape:cx="2.4914331"
+     inkscape:cy="66.82903"
+     inkscape:window-width="1863"
+     inkscape:window-height="1022"
+     inkscape:window-x="57"
+     inkscape:window-y="31"
      inkscape:window-maximized="1"
-     inkscape:current-layer="g10498"
+     inkscape:current-layer="layer4"
      inkscape:snap-global="false" />
   <defs
      id="defs2">
@@ -67,34 +67,6 @@
          style="stop-color:#ffffff;stop-opacity:0.09501138"
          offset="1"
          id="stop10803" />
-    </linearGradient>
-    <linearGradient
-       inkscape:collect="always"
-       id="linearGradient6176">
-      <stop
-         style="stop-color:#000000;stop-opacity:0.57622337"
-         offset="0"
-         id="stop6168" />
-      <stop
-         style="stop-color:#000000;stop-opacity:0.18018584"
-         offset="0.13627508"
-         id="stop6170" />
-      <stop
-         style="stop-color:#ffffff;stop-opacity:0.07390807"
-         offset="0.78653789"
-         id="stop6172" />
-      <stop
-         style="stop-color:#ffffff;stop-opacity:0.40392157;"
-         offset="0.90752345"
-         id="stop6306" />
-      <stop
-         style="stop-color:#ffffff;stop-opacity:0.06246027"
-         offset="0.96921057"
-         id="stop6308" />
-      <stop
-         style="stop-color:#ffffff;stop-opacity:0.02829207"
-         offset="1"
-         id="stop6174" />
     </linearGradient>
     <linearGradient
        inkscape:collect="always"
@@ -203,19 +175,13 @@
        clipPathUnits="userSpaceOnUse"
        id="clipPath3024">
       <rect
-         style="display:none;fill:url(#linearGradient3028);fill-opacity:1;stroke:url(#linearGradient3030);stroke-width:1.022;stroke-miterlimit:4;stroke-dasharray:none"
+         style="display:block;fill:url(#linearGradient3028);fill-opacity:1;stroke:url(#linearGradient3030);stroke-width:1.022;stroke-miterlimit:4;stroke-dasharray:none"
          id="rect3026"
          width="31.338425"
          height="31.338425"
          x="83.756355"
          y="61.708019"
-         ry="6.3965168"
-         d="m 90.152872,61.708019 h 18.545388 c 3.54367,0 6.39652,2.852847 6.39652,6.396517 v 18.545391 c 0,3.54367 -2.85285,6.396517 -6.39652,6.396517 H 90.152872 c -3.54367,0 -6.396517,-2.852847 -6.396517,-6.396517 V 68.104536 c 0,-3.54367 2.852847,-6.396517 6.396517,-6.396517 z" />
-      <path
-         id="lpe_path-effect3032"
-         style="fill:url(#linearGradient3028);fill-opacity:1;stroke:url(#linearGradient3030);stroke-width:1.022;stroke-miterlimit:4;stroke-dasharray:none"
-         class="powerclip"
-         d="M 75.113241,72.205648 H 123.73789 V 105.18446 H 75.113241 Z M 90.152872,61.708019 c -3.54367,0 -6.396517,2.852847 -6.396517,6.396517 v 18.545391 c 0,3.54367 2.852847,6.396517 6.396517,6.396517 h 18.545388 c 3.54367,0 6.39652,-2.852847 6.39652,-6.396517 V 68.104536 c 0,-3.54367 -2.85285,-6.396517 -6.39652,-6.396517 z" />
+         ry="6.3965168" />
     </clipPath>
     <linearGradient
        inkscape:collect="always"
@@ -235,19 +201,6 @@
        y1="92.581467"
        x2="99.899818"
        y2="61.460701" />
-    <filter
-       inkscape:collect="always"
-       style="color-interpolation-filters:sRGB"
-       id="filter3036"
-       x="-0.13482607"
-       y="-0.27759294"
-       width="1.2696521"
-       height="1.5551859">
-      <feGaussianBlur
-         inkscape:collect="always"
-         stdDeviation="1.7090013"
-         id="feGaussianBlur3038" />
-    </filter>
     <linearGradient
        inkscape:collect="always"
        xlink:href="#button-border-pressed"
@@ -259,7 +212,7 @@
        y2="61.460701" />
     <linearGradient
        inkscape:collect="always"
-       xlink:href="#linearGradient6176"
+       xlink:href="#button-border-pressed"
        id="linearGradient4660"
        gradientUnits="userSpaceOnUse"
        x1="99.866486"
@@ -338,7 +291,7 @@
      id="layer3"
      inkscape:label="border-normal"
      transform="translate(0.59861558,1.036608)"
-     style="display:inline">
+     style="display:none">
     <rect
        style="display:inline;fill:none;fill-opacity:1;stroke:url(#linearGradient4660);stroke-width:1.022;stroke-miterlimit:4;stroke-dasharray:none"
        id="rect4639"
@@ -346,7 +299,7 @@
        height="33.411636"
        x="2.6065092"
        y="-32.886028"
-       ry="7.31249"
+       ry="16.705818"
        transform="scale(1,-1)" />
   </g>
   <g
@@ -354,21 +307,7 @@
      inkscape:groupmode="layer"
      id="layer1"
      transform="translate(-79.514626,-60.160411)"
-     style="display:inline">
-    <path
-       style="opacity:0.736615;mix-blend-mode:normal;fill:#010101;fill-opacity:0.997197;stroke:none;stroke-width:0.98794;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.576223;filter:url(#filter3036)"
-       id="rect1532"
-       width="30.42144"
-       height="14.775603"
-       x="84.214844"
-       y="81.307251"
-       ry="7.3878016"
-       sodipodi:type="rect"
-       d="m 91.602645,81.307251 h 15.645835 c 4.09284,0 7.3878,3.29496 7.3878,7.387802 0,4.092842 -3.29496,7.387801 -7.3878,7.387801 H 91.602645 c -4.092842,0 -7.387801,-3.294959 -7.387801,-7.387801 0,-4.092842 3.294959,-7.387802 7.387801,-7.387802 z"
-       clip-path="url(#clipPath3024)"
-       inkscape:path-effect="#path-effect3032"
-       transform="matrix(1.0309967,0,0,1.0379675,-3.0818611,-3.1523741)" />
-  </g>
+     style="display:none" />
   <g
      inkscape:groupmode="layer"
      id="layer2"
@@ -382,7 +321,7 @@
        height="31.338425"
        x="83.756355"
        y="61.708019"
-       ry="6.3965168"
+       ry="15.669212"
        transform="translate(-80.11324,-61.197019)"
        inkscape:label="button-normal-border" />
     <rect
@@ -392,7 +331,7 @@
        height="30.401876"
        x="4.1113896"
        y="0.97927409"
-       ry="6.2053571" />
+       ry="15.200938" />
   </g>
   <g
      inkscape:groupmode="layer"
@@ -449,13 +388,16 @@
      id="layer4"
      inkscape:label="color">
     <rect
-       style="display:inline;opacity:0.11969092;fill:#01ff25;fill-opacity:1;stroke:none;stroke-width:1.022;stroke-miterlimit:4;stroke-dasharray:none;paint-order:markers fill stroke"
+       style="display:none;opacity:0.119691;fill:#01ff25;fill-opacity:1;stroke:none;stroke-width:1.022;stroke-miterlimit:4;stroke-dasharray:none;paint-order:markers fill stroke"
        id="rect886"
-       width="32.544285"
+       width="32.543999"
        height="32.544285"
        x="3.638804"
        y="0.94467962"
-       ry="7.1190581"
-       inkscape:label="button-normal-border" />
+       ry="16.271999"
+       inkscape:label="button-normal-border"
+       inkscape:export-filename="/home/nestor/Temes/GTK/git/DeeplySkeuo/xfwm4/button-normal-visible.png"
+       inkscape:export-xdpi="15.611391"
+       inkscape:export-ydpi="15.611391" />
   </g>
 </svg>
