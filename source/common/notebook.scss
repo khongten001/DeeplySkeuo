@@ -164,8 +164,8 @@ notebook {
 
     tabs > tab {
       border: 1px solid transparent;
-      min-height: 30px;
-      min-width: 30px;
+      min-height: 1.5em;
+      min-width: 1.5em;
       padding: 3px 12px;
 
       outline-offset: -5px;
@@ -178,10 +178,10 @@ notebook {
         color: $fg_color;
         background-color: darken($bg_color,4%);
 
-        &.reorderable-page {
-          border-color: transparentize($borders_color, 0.7);
-          background-color: transparentize($bg_color, 0.8);
-        }
+        //&.reorderable-page {
+        //  border-color: transparentize($borders_color, 0.7);
+        //  background-color: transparentize($bg_color, 0.8);
+        //}
       }
 
       &:backdrop {
@@ -225,8 +225,8 @@ notebook {
         //margin-top: 4px;
         //margin-bottom: 4px;
         //// FIXME: generalize .small-button?
-        //min-width: 20px;
-        //min-height: 20px;
+        min-width: 1em;
+        min-height: 1em;
 
         &:last-child {
           margin-left: 4px;
@@ -258,7 +258,7 @@ notebook {
           margin-left: 4px;
           margin-right: 4px;
 
-          &.reorderable-page { border-style: none solid; }
+          //&.reorderable-page { border-style: none solid; }
         }
       }
     }
@@ -281,7 +281,7 @@ notebook {
           margin-top: 4px;
           margin-bottom: 4px;
 
-          &.reorderable-page { border-style: solid none; }
+          //&.reorderable-page { border-style: solid none; }
         }
       }
     }

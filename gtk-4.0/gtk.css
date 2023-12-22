@@ -814,11 +814,9 @@ notebook > header > tabs > arrow:active { box-shadow: 0 1px rgba(255, 255, 255, 
 
 notebook > header > tabs > arrow:disabled { color: #552222; border-color: #552222; background-color: #938989; background-image: none; }
 
-notebook > header tabs > tab { border: 1px solid transparent; min-height: 30px; min-width: 30px; padding: 3px 12px; outline-offset: -5px; color: #241f31; font-weight: normal; }
+notebook > header tabs > tab { border: 1px solid transparent; min-height: 1.5em; min-width: 1.5em; padding: 3px 12px; outline-offset: -5px; color: #241f31; font-weight: normal; }
 
 notebook > header tabs > tab:hover { color: #241f31; background-color: #a7a7a7; }
-
-notebook > header tabs > tab:hover.reorderable-page { border-color: rgba(131, 131, 131, 0.3); background-color: rgba(177, 177, 177, 0.2); }
 
 notebook > header tabs > tab:backdrop { color: #87858b; }
 
@@ -828,7 +826,7 @@ notebook > header tabs > tab:checked { color: #241f31; background-color: #a2a09e
 
 notebook > header tabs > tab:backdrop:checked { color: #6b6871; background-color: #a09d9b; }
 
-notebook > header tabs > tab button.flat { padding: 1px; margin: 2px; }
+notebook > header tabs > tab button.flat { padding: 1px; margin: 2px; min-width: 1em; min-height: 1em; }
 
 notebook > header tabs > tab button.flat:last-child { margin-left: 4px; margin-right: -4px; }
 
@@ -844,8 +842,6 @@ notebook > header.top tabs:not(:only-child):last-child, notebook > header.bottom
 
 notebook > header.top tabs tab, notebook > header.bottom tabs tab { margin-left: 4px; margin-right: 4px; }
 
-notebook > header.top tabs tab.reorderable-page, notebook > header.bottom tabs tab.reorderable-page { border-style: none solid; }
-
 notebook > header.left tabs, notebook > header.right tabs { padding-top: 4px; padding-bottom: 4px; }
 
 notebook > header.left tabs:not(:only-child), notebook > header.right tabs:not(:only-child) { margin-top: 3px; margin-bottom: 3px; }
@@ -855,8 +851,6 @@ notebook > header.left tabs:not(:only-child):first-child, notebook > header.righ
 notebook > header.left tabs:not(:only-child):last-child, notebook > header.right tabs:not(:only-child):last-child { margin-bottom: -1px; }
 
 notebook > header.left tabs tab, notebook > header.right tabs tab { margin-top: 4px; margin-bottom: 4px; }
-
-notebook > header.left tabs tab.reorderable-page, notebook > header.right tabs tab.reorderable-page { border-style: solid none; }
 
 notebook > header.top tab { padding-bottom: 4px; }
 
