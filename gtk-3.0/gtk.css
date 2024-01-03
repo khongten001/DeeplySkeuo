@@ -1727,6 +1727,12 @@ undershoot.left { background-image: linear-gradient(to right, alpha(currentColor
 
 undershoot.right { background-image: linear-gradient(to left, alpha(currentColor,0.5), alpha(currentColor,0.2), alpha(currentColor,0)); background-size: 1em 100%; background-position: right; }
 
+XfdesktopIconView.view { text-shadow: 0 0 2px #a2a09e, 0 0 2px #a2a09e, 0 0 2px #a2a09e; color: #241f31; background-color: transparent; }
+
+XfdesktopIconView.view .rubberband { background-color: alpha(#97caff,0.5); }
+
+XfdesktopIconView.view:active { text-shadow: none; color: #000000; background-color: alpha(#97caff,0.5); }
+
 /* GTK NAMED COLORS ---------------- use responsibly! */
 /*
 widget text/foreground color */
